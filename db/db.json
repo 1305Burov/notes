@@ -1,0 +1,105 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "JonnyS",
+      "password": "JS123"
+    },
+    {
+      "id": 2,
+      "login": "Sonny",
+      "password": "123"
+    },
+    {
+      "login": {},
+      "password": {},
+      "id": 3
+    },
+    {
+      "login": "Ok",
+      "password": "notOk",
+      "id": 4
+    },
+    {
+      "login": "textMaster",
+      "password": "4321",
+      "id": 5
+    },
+    {
+      "login": "123",
+      "password": "321",
+      "id": 6
+    },
+    {
+      "login": "NewOne",
+      "password": "123",
+      "id": 7
+    },
+    {
+      "login": "3324234",
+      "password": "234234",
+      "id": 8
+    },
+    {
+      "login": "3123123",
+      "password": "123123",
+      "id": 9
+    },
+    {
+      "login": "Nikita",
+      "password": "1234",
+      "id": 10
+    }
+  ],
+  "posts": [
+    {
+      "userId": 1,
+      "title": "Some test note",
+      "text": "I just want to see what did I made!\n",
+      "date": "31.05.2022, 15:05",
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "title": "Now I can create a lot of notes if I want to...",
+      "text": "But I don't\n",
+      "date": "31.05.2022, 15:05",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "title": "Something for a test!",
+      "text": "Ok, I'll write a sentence for test, exactly //\n",
+      "date": "31.05.2022, 15:06",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "A new one",
+      "text": "A new one\nA new one\nA new one\nA new oneA new oneA new one\nA new oneA new oneA new oneA new one\nA new oneA new oneA new oneA new oneA new one",
+      "date": "31.05.2022, 15:39",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Another note",
+      "text": "I don't know what to write, so I'll write hello to future me...",
+      "date": "01.06.2022, 00:57",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "I got it!",
+      "text": "I got everything now\n",
+      "date": "01.06.2022, 00:59",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "title": "Is it working, isn't it?",
+      "text": "Hope so at least",
+      "date": "01.06.2022, 00:59",
+      "id": 19
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.accept-btn {
+    padding: 20px;
+    background-color: $second_color;
+    border: 0;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    &:hover {
+        background-color: $second_hover;
+    }
+}
+
+.cancel-btn {
+    padding: 20px;
+    background-color: #ddd;
+    border: 0;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .4s ease;
+    &:hover {
+        background-color: $bg_color;
+    }
+}

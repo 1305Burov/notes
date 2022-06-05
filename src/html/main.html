@@ -1,0 +1,81 @@
+<main class="main">
+    <div class="main__wrapper container hidden" id="content">   
+
+    </div>
+    
+    <form action="#" class="main__form" id="form">
+        <label for="loginInput">
+            Login
+            <div class="error__box">
+                <p class="error__text">
+                    
+                </p>
+            </div>
+            <input class="input" id="loginInput" type="text" placeholder="Enter your login" name="login">
+        </label>
+        <label for="passwordInput">
+            Password
+            <div class="error__box">
+                <p class="error__text">
+                    
+                </p>
+            </div>
+            <input class="input" id="passwordInput" type="password" placeholder="Enter your password" name="password">
+        </label>
+        
+        <div class="buttons">
+            <button class="accept-btn" id="login">Log in</button>
+            <button class="accept-btn" id="reg">Registration</button>
+        </div>
+    </form>
+    
+    <form action="#" id="newNote" class="container noteForm hidden">
+        <label for="noteTitle">
+            Title 
+            <div class="error__box">
+                <p class="error__text">
+                    
+                </p>
+            </div>
+            <input class="input noteTitle" id="noteTitle" type="text" placeholder="Enter note title" name="title">
+        </label>
+        <label for="noteText">
+            Note
+            <div class="error__box">
+                <p class="error__text">
+                    
+                </p>
+            </div>
+            <textarea class="input-textarea noteText" id="noteText" name="text" placeholder="Enter your note"></textarea>
+        </label>
+        <div class="buttons">
+            <button class="accept-btn" id="createNote">Create note</button>
+            <button class="cancel-btn" id="cancelNote">Close</button>
+        </div>
+    </form>
+
+    <div class="read hidden" id="read">
+        <form class="read__wrapper">
+            <input class="read__noteTitle" name="noteTitle" disabled>
+            <textarea class="read__noteText" name="noteText" disabled></textarea>
+            <div class="buttons">
+                <button class="accept-btn hidden">Edit</button>
+                <button class="cancel-btn" id="close-read">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="delete hidden" id="delete-form">
+        <p class="delete__title">Do you want to delete this post?</p>
+        <p class="delete__text">You won't be able to revert this!</p>
+        <div class="delete__buttons">
+            <button class="delete__accept accept-btn" id="accept-delete">
+                Yes, delete it!
+            </button>
+            <button class="delete__cancel cancel-btn" id="cancel-delete">
+                Cancel
+            </button>
+        </div>
+    </div>
+    <div class="overlay hidden" id="overlay"></div>
+</main>

@@ -1,0 +1,257 @@
+
+.main {
+    padding: 0 20px;
+    &__wrapper {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+    }
+    &__form {
+        width: 220px;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        & .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            & .accept-btn {
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+        }
+        & label {
+            position: relative;
+            & .error__box {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 20px;
+                text-align: right;
+                & .error__text {
+                    color: $error_color;
+                }
+            }
+        }
+        
+    }
+    & .noteForm {
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: calc(100% - 80px);
+        padding: 20px;
+        background-color: $main_color;
+        animation: slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        & label {
+            display: block;
+            font-size: 21px;
+            margin-top: 20px;
+            & .error__text {
+                color: $error_color;
+            }
+        }
+        & .buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            & .accept-btn {
+                margin-right: 8px;
+            }
+        }
+    }
+    & .form-out {
+        animation: slide-out 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    & .slide-top {
+        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    & .read {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2000;
+        width: 50%;
+        height: calc(100% - 120px);
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            padding: 40px 60px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgb(112, 112, 139, 0.3);
+            animation: slide-in-read 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        &__noteTitle {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 16px;
+            background-color: transparent;
+            border: 2px solid $second_color;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 24px;
+            color: $main_text;
+            &:disabled {
+                border-color: transparent;
+            }
+        }
+        &__noteText {    
+            width: 100%;        
+            flex: 1 1 auto;
+            margin-bottom: 40px;
+            padding: 16px;
+            background-color: transparent;
+            border: 2px solid $second_color;
+            border-radius: 20px;
+            color: #3a3a3a;
+            line-height: 1.3;
+            resize: none;
+            overflow-y: auto;
+            &:disabled {
+                border: transparent;
+            }
+        }
+        & .buttons {
+            align-self: flex-end;
+            & .accept-btn {
+                margin-right: 8px;
+            }
+        }
+        
+    }
+}
+
+.post {
+    display: flex;
+    max-width: 320px;
+    min-height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $second_color;  
+    border-radius: 20px;
+    &__title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    &__text {
+        max-width: 300px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    &_create {
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;    
+        border: 2px dashed red;
+        cursor: pointer;
+        transition: background-color .4s ease;
+        &:hover {
+            background-color: rgb(250, 220, 220);
+        }
+        &::after {
+            content: '+';
+            font-size: 96px;
+            color: red;
+        }
+    }
+    &__box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__date {
+        order: -1;
+        font-size: 12px;
+    }
+    &__actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: flex-end;
+        max-height: 48px;
+        opacity: 0;
+        transition: opacity .5s ease;
+        .actions {
+            &__icon {
+                display: block;
+                max-height: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    &:hover {
+        .post__actions {
+            
+            opacity: 1;
+            
+        }
+    }
+}
+
+
+
+@keyframes slide-in {
+    0% {
+        transform: translate(-200%, 0);
+        opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+}
+
+@keyframes slide-in-read {
+    0% {
+        transform: translate(-200%, 0);
+        opacity: 0;
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -200%);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -200%);
+        opacity: 0;
+    }
+}
