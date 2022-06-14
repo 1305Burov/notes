@@ -1,10 +1,10 @@
 const deletePosts = (id) => {
-    fetch(`http://localhost:1234/posts/${id}`, {
+    return fetch(`http://localhost:1234/posts/${id}`, {
         method: 'DELETE',
     })
-    .then(() => {
-        window.location.reload();
-    }) 
+    .catch((err) => {
+        console.error(err);
+    })
 }
 
 export default deletePosts;

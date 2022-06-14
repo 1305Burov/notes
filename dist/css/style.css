@@ -95,8 +95,8 @@
 .header {
   display: flex;
   align-items: center;
-  min-height: 80px;
-  margin-bottom: 40px;
+  min-height: 60px;
+  margin-bottom: 30px;
   padding: 0 20px;
   background-color: #ccf;
 }
@@ -165,13 +165,45 @@
 }
 
 .main {
+  max-height: calc(89vh - 20px);
   padding: 0 20px;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main::-webkit-scrollbar-button {
+  width: 40px;
+  height: 40px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: #b0b0f7;
+  border: 0px none #fff;
+  border-radius: 40px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background-color: #ccf;
+}
+
+.main::-webkit-scrollbar-thumb:active {
+  background-color: #ccf;
+}
+
+.main::-webkit-scrollbar-track {
+  background-color: rgba(170,170,170,.6666666667);
+  border: 0px none #fff;
+  border-radius: 40px;
 }
 
 .main__wrapper {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+  padding: 0 5px;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, auto));
 }
 
 .main__form {
@@ -315,7 +347,7 @@
 
 .post {
   display: flex;
-  max-width: 320px;
+  max-width: 100%;
   min-height: 200px;
   flex-direction: column;
   align-items: flex-start;
@@ -326,13 +358,18 @@
 }
 
 .post__title {
+  max-width: 300px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
-.post__title::first-letter {
+.post__title>span {
+  display: block;
+}
+
+.post__title>span::first-letter {
   text-transform: uppercase;
 }
 
@@ -379,10 +416,15 @@
   display: flex;
   gap: 16px;
   align-items: center;
-  justify-content: flex-end;
   max-height: 48px;
+  justify-content: flex-end;
   opacity: 0;
   transition: opacity .5s ease;
+}
+
+.post__actions>button {
+  background-color: rgba(0,0,0,0);
+  border: 0;
 }
 
 .post__actions .actions__icon {
@@ -449,6 +491,10 @@
   padding: 0;
 }
 
+.body {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1400px;
   width: 100%;
@@ -482,4 +528,96 @@
   display: none;
 }
 
+@media (max-width: 1399.98px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .post {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .main .read__wrapper {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 576px;
+  }
+
+  .delete,
+  .main>.read {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .header {
+    overflow: hidden;
+  }
+
+  .no-webp .header__search {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png") center/20px no-repeat,#fff; }
+
+  .header__search {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 0;
+    transition: width .5s,border-radius .2s ease;
+  }
+
+  .header__search::placeholder {
+    opacity: 0;
+  }
+
+  .no-webp .header__search:focus {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png") right/20px no-repeat,#fff; }
+
+  .header__search:focus {
+    width: 138px;
+    padding: 5px 20px 5px 5px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .main .read .buttons {
+    align-self: stretch;
+  }
+
+  .main .read .buttons>button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .webp .header__user .user__logout { background: url(../img/out.webp) center/cover no-repeat; }
+
+@media (max-width: 575.98px) {
+
+  .webp .header__search { background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.webp) center/20px no-repeat,#fff; }
+}
+
+@media (max-width: 575.98px) {
+
+  .webp .header__search:focus { background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.webp) right/20px no-repeat,#fff; }
+}

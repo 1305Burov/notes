@@ -1,0 +1,72 @@
+@media (max-width: 1399.98px) {  
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1199.98px) { 
+    .container {
+        max-width: 992px;
+    }
+    .post {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 991.98px) { 
+    .container {
+        max-width: 768px;
+    }
+
+    .main .read__wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 576px;
+    }
+
+    .delete, .main > .read {
+        width: calc(100% - 40px);
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;   
+    }
+    .header {
+        overflow: hidden;
+    }
+    .header__search  {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png') center / 20px no-repeat, #fff;
+        font-size: 0;
+        transition: width .5s, border-radius .2s ease;
+        &::placeholder {
+           opacity: 0;
+        }
+        &:focus {
+            width: 138px;
+            padding: 5px 20px 5px 5px;
+            border-radius: 6px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png') right / 20px no-repeat, #fff;
+            font-size: 14px;
+        }
+    }
+    .main .read .buttons {
+        align-self: stretch;
+
+        & > button  {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    } 
+}

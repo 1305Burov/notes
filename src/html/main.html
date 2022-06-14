@@ -4,7 +4,7 @@
     </div>
     
     <form action="#" class="main__form" id="form">
-        <label for="loginInput">
+        <label>
             Login
             <div class="error__box">
                 <p class="error__text">
@@ -13,7 +13,7 @@
             </div>
             <input class="input" id="loginInput" type="text" placeholder="Enter your login" name="login">
         </label>
-        <label for="passwordInput">
+        <label>
             Password
             <div class="error__box">
                 <p class="error__text">
@@ -30,7 +30,7 @@
     </form>
     
     <form action="#" id="newNote" class="container noteForm hidden">
-        <label for="noteTitle">
+        <label>
             Title 
             <div class="error__box">
                 <p class="error__text">
@@ -39,7 +39,7 @@
             </div>
             <input class="input noteTitle" id="noteTitle" type="text" placeholder="Enter note title" name="title">
         </label>
-        <label for="noteText">
+        <label>
             Note
             <div class="error__box">
                 <p class="error__text">
@@ -50,32 +50,34 @@
         </label>
         <div class="buttons">
             <button class="accept-btn" id="createNote">Create note</button>
-            <button class="cancel-btn" id="cancelNote">Close</button>
+            <button class="cancel-btn" id="cancelNote" type="reset">Close</button>
         </div>
     </form>
 
-    <div class="read hidden" id="read">
-        <form class="read__wrapper">
-            <input class="read__noteTitle" name="noteTitle" disabled>
+    <form class="read hidden" id="read">
+        <div class="read__wrapper">
+            <textarea class="read__noteTitle" name="noteTitle" disabled></textarea>
             <textarea class="read__noteText" name="noteText" disabled></textarea>
             <div class="buttons">
-                <button class="accept-btn hidden">Edit</button>
-                <button class="cancel-btn" id="close-read">Close</button>
+                <button class="accept-btn">Edit</button>
+                <button class="cancel-btn" id="close-read" type="reset">Close</button>
             </div>
         </div>
-    </div>
+    </form>
     
-    <div class="delete hidden" id="delete-form">
+    <form class="delete hidden" id="delete-form">
         <p class="delete__title">Do you want to delete this post?</p>
         <p class="delete__text">You won't be able to revert this!</p>
         <div class="delete__buttons">
             <button class="delete__accept accept-btn" id="accept-delete">
                 Yes, delete it!
             </button>
-            <button class="delete__cancel cancel-btn" id="cancel-delete">
+            <button class="delete__cancel cancel-btn" id="cancel-delete" type="button">
                 Cancel
             </button>
         </div>
-    </div>
+    </form>
+
     <div class="overlay hidden" id="overlay"></div>
+     
 </main>
