@@ -6,27 +6,22 @@ const formActions = () => {
     const form = document.getElementById('form');
 
     form.addEventListener('click', (e) => {
-        const target = e.target,
-            loginInput = document.getElementById('loginInput'),
-            passwordInput = document.getElementById('passwordInput');
+        const target = e.target;
+        const loginInput = document.getElementById('loginInput');
+        const passwordInput = document.getElementById('passwordInput');
         
         e.preventDefault();
         
-        if (target.id === 'login') {
-            let loginCheck = check(loginInput),
-                passCheck = check(passwordInput);
-
-            if (loginCheck && passCheck) {
-                auth(loginInput.value.trim(), passwordInput.value.trim());
+        const loginCheck = check(loginInput);
+        const passCheck = check(passwordInput);
+        
+        if (loginCheck && passCheck) {
+            if (target.id === 'reg') {
+                reg(loginInput.value, passwordInput.value); 
             }
-        }
 
-        if (target.id === 'reg') {
-            let loginCheck = check(loginInput),
-                passCheck = check(passwordInput);
-
-            if (loginCheck && passCheck) {
-                reg(loginInput.value, passwordInput.value);
+            if (target.id === 'login') {
+                auth(loginInput.value.trim(), passwordInput.value.trim());
             }
         }
     });

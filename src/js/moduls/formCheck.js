@@ -14,11 +14,11 @@ const formCheck = (input) => {
         writeError(input, 'At least 3 symbols');
     }
 
+    
     input.addEventListener('focus', () => {
         input.closest('label').querySelector('.error__text').textContent = '';
         input.style.borderColor = '';
-    })
-
+    },  {once: true})
 
 }
 
