@@ -5,7 +5,7 @@ const getUsers = () => {
     })
     .catch((err) => {
         console.error(err);
-    }) 
+    })
 }   
 
 export default getUsers;
