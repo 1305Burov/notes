@@ -1,5 +1,5 @@
 const getUsers = () => {
-    return fetch(`https://my-json-server.typicode.com/1305burov.github.io/notes/users`)
+    return fetch(`http://localhost:1234/users`)
     .then((res) => {
         return res.json();
     })
@@ -10,6 +10,3 @@ getUsers().then((res) => {
 })
 
 export default getUsers;
-
-// https://my-json-server.typicode.com/1305burov.github.io/notes
-// http://localhost:1234/users
