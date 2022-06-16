@@ -2,7 +2,7 @@ import check from './formCheck.js';
 import auth from './auth.js';
 
 const reg = (login, password) => {
-    fetch(`http://my-json-server.typicode.com/1305burov/notes/users`, {
+    fetch(`https://my-json-server.typicode.com/1305burov/notes/users`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
