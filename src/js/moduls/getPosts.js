@@ -9,3 +9,6 @@ const getPosts = (userId) => {
 }
 
 export default getPosts;
+
+
+// https://my-json-server.typicode.com/1305burov.github.io/notes
