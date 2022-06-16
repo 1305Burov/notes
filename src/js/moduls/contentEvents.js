@@ -1,4 +1,3 @@
-import deletePosts from './deletePosts.js';
 import readPost from './readPost.js';
 
 const contentEvents = () => {

@@ -1,5 +1,5 @@
 const newPost = (userId, title, text) => {
-    return fetch(`https://my-json-server.typicode.com/1305burov/notes/posts`, {
+    return fetch(`http://localhost:1234/posts`, {
         method: 'POST',
         headers: {
                 'Content-Type': 'application/json',

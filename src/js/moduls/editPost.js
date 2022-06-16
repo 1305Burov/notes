@@ -1,5 +1,5 @@
 const editPost = (postId, title, text) => {
-    return fetch(`https://my-json-server.typicode.com/1305burov/notes/posts/${postId}`, {
+    return fetch(`http://localhost:1234/posts/${postId}`, {
         method: 'PATCH',
         body: JSON.stringify({
             title,
