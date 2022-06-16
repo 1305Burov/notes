@@ -1,5 +1,5 @@
 const readPost = (postId) => {
-    return fetch(`http://localhost:1234/posts/${postId}`)
+    return fetch(`http://my-json-server.typicode.com/1305burov/notes/posts/${postId}`)
     .then((res) => {
         return res.json();
     })

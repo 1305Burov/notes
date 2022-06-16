@@ -1,5 +1,5 @@
 const getUsers = () => {
-    return fetch(`http://localhost:1234/users`)
+    return fetch(`http://my-json-server.typicode.com/1305burov/notes/users`)
     .then((res) => {
         return res.json();
     })

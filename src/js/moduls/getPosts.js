@@ -1,5 +1,5 @@
 const getPosts = (userId) => {
-    return fetch(`http://localhost:1234/users/${userId}/posts`)
+    return fetch(`http://my-json-server.typicode.com/1305burov/notes/users/${userId}/posts`)
         .then((res) => {
             return res.json();
         })

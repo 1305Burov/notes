@@ -1,5 +1,5 @@
 const deletePosts = (id) => {
-    return fetch(`http://localhost:1234/posts/${id}`, {
+    return fetch(`http://my-json-server.typicode.com/1305burov/notes/posts/${id}`, {
         method: 'DELETE',
     })
     .catch((err) => {
