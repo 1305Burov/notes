@@ -3,10 +3,9 @@ const getUsers = () => {
     .then((res) => {
         return res.json();
     })
+    .catch((err) => {
+        console.error(err);
+    }) 
 }   
-
-getUsers().then((res) => {
-    console.log(res);
-})
 
 export default getUsers;

@@ -15,9 +15,12 @@ const reg = (login, password) => {
     .then((res) => {
         return res.json();
     })
-    .then((res) => {
+    .then(() => {
         auth(login, password);
     })
+    .catch((err) => {
+        console.error(err);
+    }) 
 }
 
 export default reg;
